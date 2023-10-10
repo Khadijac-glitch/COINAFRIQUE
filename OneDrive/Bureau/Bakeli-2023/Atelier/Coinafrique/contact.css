@@ -1,0 +1,139 @@
+   /************************Navbar section  ***************************/
+   .header_wrapper .navbar{
+    padding: 25px 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;  
+}
+
+.header_wrapper .navbar-brand img{
+    max-width: 300px;
+    height: auto;
+}
+.header_wrapper .navbar-toggler{
+    border: 0;
+    color:black;
+    line-height: 2;
+    position: relative;
+    left: 280px;
+}
+.header_wrapper .navbar-toggler:focus{
+    box-shadow: none;
+}
+.header_wrapper .nav-item{
+    margin: 0 10px;
+}
+.header_wrapper .nav-item .nav-link{
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    color:black;
+    display: inline-block;
+}
+.header_wrapper .nav-item .nav-link::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width:  100%;
+    height: 2px;
+    background: rgb(224, 168, 63);
+    transition: 0.3;
+    bottom:0;
+}
+
+.header_wrapper nav{
+    background-color: gray;
+}
+.header_wrapper .nav-item .nav-link.active::after,
+.header_wrapper .nav-item .nav-link:hover::after{
+    width: 100%;
+}
+.header_wrapper .nav-item .nav-link.active,
+.header_wrapper .nav-item .nav-link:hover{
+    color:white;
+    border-top: 2px solid rgb(224, 168, 63);
+    border-color: 2px solid rgb(224, 168, 63);
+    
+}
+ .header-scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:gray;
+}
+.nav-item .btn{
+    height: 70px;
+    width: 280px;
+    text-decoration: none;
+    border-radius: 35px;
+    font-size: 25px;
+    background-color:red;
+    color: white;
+}
+.section5{
+    height: 400px;
+    position: relative;
+    top:50px;
+    background: #2B4558;
+    
+}
+.footer1{
+    width: 250px;
+    height:50px;
+}
+.social{
+    width: 25px;
+    height: 25px;
+}
+.goo{
+    width: 120px;
+    height:50px;
+}
+.footer{
+    position: relative;
+    top:100px;
+}
+input{
+    height:60px; 
+    border-radius: 10px;
+}
+textarea{
+    height: 150px;
+}
+iframe{
+    position: relative;
+    top:50px;
+}
+@media(max-width:991px) {
+    .section5 {
+        text-align: center;
+        position: relative;
+        height: 1000px;
+    }
+    .nav-item .btn{
+        height: 40px;
+        width: 210px;
+       position: relative;
+       top: 20px;
+        font-size: 15px;
+    }
+    .header_wrapper .menu-navbar-nav{
+        text-align: center;
+        background-color:gray;
+        padding-bottom: 15px;
+    }
+    .header_wrapper .nav-item .nav-link{
+        margin-top: 15px;
+    }
+    .wow{
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+       
+    }
+    .card{
+        width:16rem;
+        height: 600px
+        }
+ 
+}

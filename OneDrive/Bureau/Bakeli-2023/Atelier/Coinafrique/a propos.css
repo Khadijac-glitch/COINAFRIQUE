@@ -1,0 +1,24 @@
+.barnner-1{
+    background-image: url(banner-apropos.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+.section3{
+    height: 400px;
+    position: relative;
+    top:50px;
+    background: #2B4558;
+    
+}
+@media(max-width:991px) {
+
+    .section3 {
+        text-align: center;
+        position: relative;
+        bottom: 200px;
+        height: 800px;
+    }
+ 
+}
