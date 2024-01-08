@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ajout.css">
+  <title>Objects_Ajoutés</title>
+</head>
+<body>
+<div class="container">
+<nav>
+  <a href="#" class="logo" id="logo">Coding</a>
+  <ul>
+    <li class="nav-item"><a href="ajout.html" class="">Femme</a></li>
+    <li class="nav-item"><a href="ajoutmen.html" class="nav-link">Homme</a></li>
+    <li class="nav-item">
+      <a href="khadija.html">
+      <button type="button",role="button" class=" hov btn" id="displayForm">ADMINS_Accès</button>
+    </a>
+    </li>
+  </ul>
+</nav>
+
+    <div>
+      <!-- <img src="sneakers.png" class="img-fluid"> -->
+    </div>
+    <!-- Button to call the praducts -->
+    <button class="btn btn-light bg-light mt-2 mb-2" onclick='populateTableList()'>Show All</button>
+    <!-- Table  -->
+    <table class="table table-image">
+      <thead class="thead-light">
+        <tr class="text-center">
+          <th class="col-2">Models</th>
+          <th class="col-2">Nom</th>
+          <th class="col-2">Taille</th>
+          <th class="col-2">Prix (CFA)</th>
+          <th class="col-2">Actions</th>
+        </tr>
+      </thead>
+      <!-- Table body with the list of products -->
+      <tbody id="productList" class="text-light">
+
+      </tbody>
+    </table>
+ 
+  </div>
+  <!-- Footer -->
+  <footer class="container fixed-bottom  bg-dark text-dark">
+    <div class=" text-center py-3">© 2020 Copyright:</div>  
+  </footer>
+<!-- Code javaScript -->
+  <script src="ajoutmen.js"></script>
+</body>
+ 
+</html>
