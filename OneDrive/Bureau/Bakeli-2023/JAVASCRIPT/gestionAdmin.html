@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gestionAdmin.css">
+    <title>Admin</title>
+</head>
+<body>
+    <div class="container">
+<!-- ==========================NAVBAR================================================== -->
+        <nav>
+            <a href="#" class="logo" id="logo">Coding</a>
+            <ul>
+                <li class="nav-item">
+                    <button type="submit" type="button" , role="button" class="btn" id="displayForm">ADMINS_Accès</button>
+                </li>
+            </ul>
+        </nav>
+<!-- ==========================FIN NAVBAR============================================== -->
+
+<!-- ==========================FORMULAIRE SECTION====================================== -->
+        <section>
+            <div class="sec-container">
+                <div class="formWrapper">
+                    <div class="card">
+                        <div class="card-header">
+                            <div id="forLogin" class="form-header active">Se connecter</div>
+                            <div id="forRegister" class="form-header">S'inscrire</div>
+                        </div>
+                        <div class="card-body" id="formContainer">
+
+<!-- =============================FORMULAIRE DE CONNEXION============================== -->
+                            <form action="" id="loginForm">
+                                <input type="email" id="email2" class="form-control" placeholder="Adress mail" />
+                                <input type="password" id="password2" class="form-control" placeholder="Mot de passe" />
+                                <label for="remember">
+                                    <input type="checkbox" class="form-check" id="remember" />
+                                    Se Souvenir de moi
+                                </label>
+                                <button type="submit" class="formButton">Connexion</button>
+                            </form>
+<!-- ==========================FIN FORMULAIRE DE CONNEXION============================== -->
+                          
+<!-- ==============================FORMULAIRE D'INSCRIPTION============================  -->
+                            <form action="" id="registerForm" class="toggleForm">
+                                <input type="text" id="name" class="form-control" placeholder="@Administrateur..." />
+                                <input type="email" id="email" class="form-control" placeholder="Adreass mail..." />
+                                <input type="password" id="password" class="form-control" placeholder="Mot de passe..." />
+                                <label for="remember">
+                                    <input type="checkbox" class="form-check" id="privacy" />
+                                    J'accepte les termes de l'accord
+                                </label>
+                                <button type="submit" id="submitbutton" class="formButton">Inscription</button>
+                            </form>
+<!-- ==========================FIN FORMULAIRE D'INSCRIPTION============================  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- ==========================FIN FORMULAIRE SECTION=================================== -->
+    </div>
+
+<!-- ==========================SCRIPT POUR AUTHENTIFICATION FIREBASE===================  -->
+    <script type="module" src="admin-validation-form.js"></script>
+<!-- ==========================FIN SCRIPT POUR AUTHENTIFICATION FIREBASE===============  -->
+<!-- ==========================SCRIPT POUR LE FORMULAIRE PAR KHADIJA===================  -->
+    <script src="khadija.js"></script>
+<!-- ==========================FIN SCRIPT POUR LE FORMULAIRE PAR KHADIJA===============  -->
+
+</body>
+
+</html>

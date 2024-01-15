@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>TodoList</title>
+    <style>
+        .task {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>TodoList</h2>
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="taskInput">Ma liste de tâche :</label>
+                <input type="text" class="form-control" id="taskInput" required>
+            </div>
+            <button type="button" class="btn btn-info" onclick="ajouterTache()">Ajouter</button>
+        </form>
+
+        <div id="taskList" class="mt-3">
+            <!-- La liste des tâches sera affichée ici -->
+        </div>
+    </div>
+    <script>
+        function ajouterTache() {
+            var taskInput = document.getElementById('taskInput');
+            var taskList = document.getElementById('taskList');
+            var taskDiv = document.createElement('div');
+            taskDiv.classList.add('task', 'alert', 'alert-danger');
+            taskDiv.innerHTML = `
+                <span>${taskInput.value}</span>
+                <div class="btn-group ml-2" role="group">
+                    <button type="button" class="btn btn-success" onclick="changerEtat(this, 'done')">Done</button>
+                    <button type="button" class="btn btn-warning" onclick="changerEtat(this, 'doing')">Doing</button>
+                    <button type="button" class="btn btn-danger" onclick="changerEtat(this, 'todo')">To Do</button>
+                    <button  type="button" class="btn btn-dark" onclick="changerEtat(this, 'todo')">Delete</button>
+
+                </div>
+            `;
+            taskList.appendChild(taskDiv);
+            taskInput.value = "";
+        }
+
+        function changerEtat(button, etat) {
+            var taskDiv = button.closest('.task');
+            taskDiv.classList.remove('alert-danger', 'alert-warning', 'alert-success');
+
+            switch (etat) {
+                case 'todo':
+                    taskDiv.classList.add('alert-danger');
+                    break;
+                case 'doing':
+                    taskDiv.classList.add('alert-warning');
+                    break;
+                case 'done':
+                    taskDiv.classList.add('alert-success');
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

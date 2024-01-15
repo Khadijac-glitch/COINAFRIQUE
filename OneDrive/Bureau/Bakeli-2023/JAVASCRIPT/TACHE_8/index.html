@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation de Tableaux</title>
+</head>
+<body>
+    <p id="un"></p>
+    <p id="deux"></p>
+
+    <script>
+
+        // Demander à l'utilisateur de saisir les tableaux
+        var tab1 = prompt("Entrez les éléments du tableau 1 (séparés par des virgules):").split(',');
+        var tab2 = prompt("Entrez les éléments du tableau 2 (séparés par des virgules):").split(',');
+
+        // Initialiser le tableau 3
+        var tab3 = tab1.filter(tab1 => tab1 > 0);
+        // Remplacer tab2
+         tab2.fill(0);
+        //
+        document.getElementById("un").innerHTML = tab3;
+        document.getElementById("deux").innerHTML =tab2;
+         
+    </script>
+
+</body>
+</html>

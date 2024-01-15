@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="un"></p>
+    <p id="deux"></p>
+    <p id="trois"></p>
+    <p id="quatre"></p>
+  <script>
+function remplirTableau1(taille) {
+    var tableau = [];
+    for (var i = 0; i < taille; i++) {
+        var nbr1 = prompt("Entrez un élément pour le tableau1:");
+        tableau.push(nbr1);
+    }
+    return tableau;
+}
+function remplirTableau2(taille) {
+    var tableau = [];
+    for (var i = 0; i < taille; i++) {
+        var nbr2 = prompt("Entrez un élément pour le tableau2:");
+        tableau.push(nbr2);
+    }
+    return tableau;
+}
+// Fonction pour créer tab3 et tab4 à partir de tab1 et tab2
+function creerTab3etTab4(tab1, tab2) {
+    var tab3 = [];
+    var tab4 = [];
+
+    for (var i = 0; i < tab1.length; i++) {
+        var element = tab1[i];
+        if (!tab2.includes(element)) {
+            // Si l'élément n'est pas dans tab2, l'ajouter à tab3
+            tab3.push(element);
+        } else {
+            // Si l'élément est dans tab2, l'ajouter à tab4
+            tab4.push(element);
+        }
+    }
+
+    return { tab3: tab3, tab4: tab4 };
+}
+
+// Demander à l'utilisateur de remplir les tableaux
+var tailleTableau = 5;
+var tab1 = remplirTableau1(tailleTableau);
+var tab2 = remplirTableau2(tailleTableau);
+
+// Créer tab3 et tab4
+var resultats = creerTab3etTab4(tab1, tab2);
+var tab3 = resultats.tab3;
+var tab4 = resultats.tab4;
+
+// Afficher les résultats dans la console
+
+document.getElementById("un").innerHTML="tab1:" + tab1;
+document.getElementById("deux").innerHTML="tab2:" + tab2;
+document.getElementById("trois").innerHTML=("tab3: élélment de tab1" , tab3);
+document.getElementById("quatre").innerHTML=("tab4: élélment de tab1" , tab4);
+
+  </script>
+        </body>
+        </html>
+
+        <!-- Exo_2 -->
+<!-- //         var tab1 = [5, 3, 87, 1, -4, -99, 0];
+//         // Fonction pour trier le tableau 
+// function trierTableau(tab1) {
+//     var n = tab1.length;
+//     for (var i = 0; i < n+1; i++) {
+//     }
+// }
+
+// // Fonction pour trouver max et min
+// function trouverMaxMin(tab1) {
+//     var max = tab1[0];
+//     var min = tab1[0];
+
+//     for (var i = 1; i < tab1.length; i++) {
+//         if (tab1[i] > max) {
+//             max = tab1[i];
+//         }
+//         if (tab1[i] < min) {
+//             min = tab1[i];
+//         }
+//     }
+
+//     return { max: max, min: min };
+// }
+
+// // Appeler 
+// trierTableau(tab1);
+
+// console.log("Tableau trié:", tab1);
+// // Appeler  max et min
+// var resultats = trouverMaxMin(tab1);
+// // Afficher les résultats
+// console.log("Valeur maximale:", resultats.max);
+// console.log("Valeur minimale:", resultats.min); -->
+
+
+    
