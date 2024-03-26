@@ -1,0 +1,19 @@
+.screen {
+   
+    
+ 
+   
+  }
+  .screen input{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: black;
+    text-align: right;
+    flex: 1;
+    width:213px;
+    font-size: 40px;
+    border: none;
+    color: pink;
+    
+
+} 
